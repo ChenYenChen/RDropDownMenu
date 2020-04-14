@@ -24,6 +24,8 @@ let package = Package(
 ),</code></pre>
 <p>Then run <code>swift package update</code>.</p>
 
-<p>Note that the <a href="https://swift.org/package-manager">Swift Package Manager</a> doesn't support building for iOS/tvOS/macOS/watchOS apps – see Accio in the next section for that.
+<p align="center">
+  <img src="./Design/dropDownMenu.gif" />
+</p>
 
 
