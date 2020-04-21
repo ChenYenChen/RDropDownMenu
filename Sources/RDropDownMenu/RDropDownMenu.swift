@@ -71,7 +71,7 @@ public class RDropDownMenu: UIView {
         self.addGestureRecognizer(menuTap)
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.initView()
     }
@@ -82,7 +82,7 @@ public class RDropDownMenu: UIView {
     }
     
     // MARK: - reload data
-    func reloadData() {
+    public func reloadData() {
         guard let source = self.dataSource else { return }
         // 列數
         let numberOfColumn = source.numberOfColumns(self)
