@@ -4,7 +4,7 @@
 
 import UIKit
 
-protocol RDropDownMenuDataSource: NSObjectProtocol {
+public protocol RDropDownMenuDataSource: NSObjectProtocol {
     /// 有多少個 column
     func numberOfColumns(_ menu: RDropDownMenu) -> Int
     

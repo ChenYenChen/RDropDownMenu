@@ -8,7 +8,7 @@
 import UIKit
 
 /// 下拉選單屬性設定
-struct RDropDownMenuAttributes {
+public struct RDropDownMenuAttributes {
     /// 文字顏色
     var textColor: UIColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
     /// 已選文字顏色

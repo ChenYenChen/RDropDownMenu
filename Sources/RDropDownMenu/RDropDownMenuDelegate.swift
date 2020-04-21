@@ -4,7 +4,7 @@
 
 import Foundation
 
-protocol RDropDownMenuDelegate: NSObjectProtocol {
+public protocol RDropDownMenuDelegate: NSObjectProtocol {
     func menu(_ menu: RDropDownMenu, didSelectRowAtIndexPath indexPath: [RDropDownMenu.Index])
 }
 extension RDropDownMenuDelegate {

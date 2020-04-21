@@ -4,7 +4,7 @@
 
 import UIKit
 
-class RDropDownMenu: UIView {
+public class RDropDownMenu: UIView {
     
     public class Index {
         /// 列
@@ -426,13 +426,13 @@ class RDropDownMenu: UIView {
 }
 extension RDropDownMenu: UITableViewDataSource {
     // MARK: - Table view dataSource
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let source = self.dataSource else { return 0 }
         let beforeSelect = self.currentSelectedRows.filter({ $0.section < tableView.tag && $0.column == self.currentSelectedColumn })
         return source.numberOfSectionItems(self, inColumn: self.currentSelectedColumn, beforeSectionSelect: beforeSelect)
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellID = "dropDownCell"
         var cell: UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: cellID)
         
@@ -466,7 +466,7 @@ extension RDropDownMenu: UITableViewDataSource {
 }
 extension RDropDownMenu: UITableViewDelegate {
     // MARK: - Table view delegate
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let source = self.dataSource else { return }
         let columns = self.currentSelectedRows.filter({ $0.column == self.currentSelectedColumn })
         guard let section = columns.first(where: { $0.section == tableView.tag }) else { return }
